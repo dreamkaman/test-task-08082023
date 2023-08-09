@@ -1,0 +1,62 @@
+footer {
+  color: #fff;
+  background-color: $accent-color;
+
+  .top-wrapper {
+    padding: 60px 0;
+
+    .logo-footer {
+      width: 140px;
+    }
+
+    address {
+      .common-link {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+
+      .location::before {
+        content: '';
+        min-width: 11px;
+        height: 16px;
+        margin-right: 14px;
+
+        background-image: url('../assets/location.svg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      .phone-link::before {
+        content: '';
+        min-width: 16px;
+        height: 16px;
+        margin-right: 14px;
+
+        background-image: url('../assets/phone.svg');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      .mail-link::before {
+        content: '';
+        min-width: 16px;
+        height: 11px;
+        margin-right: 14px;
+
+        background-image: url('../assets/envelope.svg');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  .copyrights {
+    padding: 24px 0;
+    border: 1px solid rgba($color: #fff, $alpha: 0.1);
+    text-align: center;
+  }
+}
