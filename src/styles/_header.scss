@@ -1,3 +1,31 @@
-.header-logo {
-  fill: black;
+header {
+  display: flex;
+  align-items: center;
+  height: 102px;
+
+  .logo {
+    width: 70px;
+    margin-right: 330px;
+    stroke-width: 0;
+    fill: $font-dark-color;
+  }
+
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .menu-item {
+      padding: 4px 0;
+    }
+
+    .menu-item:not(:last-child) {
+      margin-right: 60px;
+    }
+  }
+
+  .active {
+    border-top: 1px solid $font-dark-color;
+    border-bottom: 1px solid $font-dark-color;
+  }
 }

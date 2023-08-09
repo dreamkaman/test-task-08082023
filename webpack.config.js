@@ -1,5 +1,6 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin');
+
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
@@ -10,6 +11,7 @@ const mode = process.env.NODE_ENV || 'development';
 const devMode = mode === 'development';
 
 const target = devMode ? 'web' : 'browserslist';
+
 const devtool = devMode ? 'source-map' : undefined;
 
 module.exports = {
@@ -17,13 +19,13 @@ module.exports = {
   target,
   devtool,
   devServer: {
-    port: 3000,
+    port: 3200,
     open: true,
     hot: true,
   },
-  entry: ['@babel/polyfill', path.resolve(__dirname, 'src', 'index.js')],
+  entry: [path.resolve(__dirname, 'src', 'index.js')],
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.join(__dirname, './dist'),
     clean: true,
     filename: '[name].[contenthash].js',
     assetModuleFilename: 'assets/[name][ext]', //or you can use 'assets/[hash][ext]'
@@ -32,41 +34,44 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src', 'index.html'),
     }),
-    new HtmlWebpackPartialsPlugin({
-      path: path.resolve(__dirname, 'src/partials', 'header.html'),
-      location: 'header',
-      template_filename: 'index.html',
-    }),
-    new HtmlWebpackPartialsPlugin({
-      path: path.resolve(__dirname, 'src/partials', 'hero.html'),
-      location: 'hero',
-      template_filename: 'index.html',
-    }),
-    new HtmlWebpackPartialsPlugin({
-      path: path.resolve(__dirname, 'src/partials', 'section-about.html'),
-      location: 'about-us',
-      template_filename: 'index.html',
-    }),
-    new HtmlWebpackPartialsPlugin({
-      path: path.resolve(__dirname, 'src/partials', 'section-contact-us.html'),
-      location: 'contact-us',
-      template_filename: 'index.html',
-    }),
-    new HtmlWebpackPartialsPlugin({
-      path: path.resolve(__dirname, 'src/partials', 'section-our-projects.html'),
-      location: 'our-projects',
-      template_filename: 'index.html',
-    }),
-    new HtmlWebpackPartialsPlugin({
-      path: path.resolve(__dirname, 'src/partials', 'section-our-tasks.html'),
-      location: 'our-tasks',
-      template_filename: 'index.html',
-    }),
-    new HtmlWebpackPartialsPlugin({
-      path: path.resolve(__dirname, 'src/partials', 'footer.html'),
-      location: 'footer',
-      template_filename: 'index.html',
-    }),
+    new HtmlWebpackPartialsPlugin([
+      {
+        path: './src/partials/header.html',
+        location: 'body',
+        template_filename: 'index.html',
+        priority: 'high',
+      },
+      {
+        path: path.resolve(__dirname, 'src/partials', 'hero.html'),
+        location: 'main',
+        template_filename: 'index.html',
+      },
+      {
+        path: path.resolve(__dirname, 'src/partials', 'section-about.html'),
+        location: 'main',
+        template_filename: 'index.html',
+      },
+      {
+        path: path.resolve(__dirname, 'src/partials', 'section-our-tasks.html'),
+        location: 'main',
+        template_filename: 'index.html',
+      },
+      {
+        path: path.resolve(__dirname, 'src/partials', 'section-our-projects.html'),
+        location: 'main',
+        template_filename: 'index.html',
+      },
+      {
+        path: path.resolve(__dirname, 'src/partials', 'section-contact-us.html'),
+        location: 'main',
+        template_filename: 'index.html',
+      },
+      {
+        path: path.resolve(__dirname, 'src/partials', 'footer.html'),
+        location: 'footer',
+        template_filename: 'index.html',
+      },
+    ]),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
     }),
@@ -120,7 +125,6 @@ module.exports = {
                   mozjpeg: {
                     progressive: true,
                   },
-                  // optipng.enabled: false will disable optipng
                   optipng: {
                     enabled: false,
                   },
@@ -131,7 +135,6 @@ module.exports = {
                   gifsicle: {
                     interlaced: false,
                   },
-                  // the webp option will enable WEBP
                   webp: {
                     quality: 75,
                   },
@@ -141,12 +144,12 @@ module.exports = {
         type: 'asset/resource',
       },
       {
-        test: /\.(?:js|mjs|cjs)$/,
-        exclude: /node_modules/,
+        test: /\.m?js$/i,
+        exclude: /(node_modules|bower_components)/,
         use: {
           loader: 'babel-loader',
           options: {
-            presets: [['@babel/preset-env', { targets: 'defaults' }]],
+            presets: ['@babel/preset-env'],
           },
         },
       },

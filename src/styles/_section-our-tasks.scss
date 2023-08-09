@@ -1,0 +1,42 @@
+.container {
+  .task-list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    .task {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 570px;
+      font-size: 21px;
+      line-height: 36px; /* 163.636% */
+    }
+
+    .task::before {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: min-content;
+      height: 140px;
+      margin-right: 25px;
+      font-family: $secondary-font-family;
+      font-size: 200px;
+      font-weight: 900;
+      line-height: normal;
+      color: $font-lighter-color;
+    }
+
+    .task-left {
+      max-width: 360px;
+    }
+
+    .task-left::before {
+      content: '1';
+    }
+
+    .task-right::before {
+      content: '2';
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.grid-about-us {
+  display: grid;
+  grid-template-columns: 330px 270px 430px;
+  grid-template-rows: 1fr;
+  height: 495px;
+  padding: 30px 70px;
+
+  background-color: $bg-section-color;
+
+  .grid-part1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 0 30px;
+  }
+
+  .grid-part2 {
+    padding: 30px 0 60px;
+  }
+
+  .grid-part3 {
+    padding-left: 30px;
+
+    .title {
+      font-size: 62px;
+    }
+
+    .about-text {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 25px; /* 156.25% */
+    }
+
+    .link {
+      background-color: #fff;
+    }
+
+    .link:hover {
+      background-color: $font-light-color;
+    }
+  }
+}

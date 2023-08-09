@@ -1,0 +1,90 @@
+.slider {
+  display: flex;
+  justify-content: space-between;
+
+  .left-side {
+    margin-top: 336px;
+
+    .project-title {
+      font-size: 64px;
+      text-transform: uppercase;
+    }
+
+    .project-name {
+      font-size: 64px;
+      font-weight: 700;
+      text-transform: uppercase;
+
+      color: $font-dark-color;
+    }
+
+    .btn-wrapper {
+      display: flex;
+      justify-content: space-between;
+
+      margin-top: 90px;
+      width: 130px;
+
+      .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 53px;
+        height: 53px;
+
+        border: 1px solid #f2f2f2;
+        background-color: #f9f9f9;
+
+        .arrow {
+          fill: $font-dark-color;
+        }
+      }
+
+      .btn:hover {
+        background-color: $font-light-color;
+      }
+    }
+
+    .counter {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      margin-top: 94px;
+      width: 142px;
+
+      font-size: 24px;
+
+      color: $font-light-color;
+
+      .divide-line {
+        height: 30px;
+
+        stroke: $font-light-color;
+      }
+    }
+  }
+
+  .right-side {
+    position: relative;
+
+    width: 770px;
+
+    .slide-link {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: #ffffff;
+      cursor: pointer;
+    }
+
+    .slide-link:hover {
+      background-color: $font-light-color;
+    }
+
+    .arrow {
+      fill: $font-dark-color;
+    }
+  }
+}

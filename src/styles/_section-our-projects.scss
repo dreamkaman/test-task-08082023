@@ -1,0 +1,34 @@
+.our-projects {
+  .projects {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px;
+
+    height: 540px;
+
+    .first-line {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      gap: 30px;
+    }
+
+    .second-line {
+      display: grid;
+      grid-template-columns: 270px 470px 370px;
+      gap: 30px;
+    }
+  }
+
+  .link {
+    margin-left: auto;
+
+    color: #fff;
+    fill: #fff;
+    background-color: $font-dark-color;
+  }
+
+  .link:hover {
+    background-color: $font-light-color;
+  }
+}
