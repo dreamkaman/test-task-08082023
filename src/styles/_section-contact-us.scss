@@ -1,24 +1,72 @@
 .contact-us {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 390px 1fr;
+    grid-template-rows: 1fr;
+    gap: 30px;
+  }
+
   .contact-form {
     width: 390px;
 
-    .wrapper {
-      display: grid;
-      grid-template-columns: 390px 1fr;
-      grid-template-rows: 1fr;
-      gap: 30px;
+    div {
+      position: relative;
+
+      .common-label {
+        position: absolute;
+        top: 14px;
+        left: 21px;
+
+        color: #8d8d8d;
+      }
     }
 
-    input {
+    .common-input {
       width: 100%;
 
-      margin-bottom: 10px;
+      padding: 14px 21px;
+
+      font-size: 14px;
+      letter-spacing: 0.56px;
+
+      border: none;
+
+      background-color: $font-lighter-color;
     }
 
     textarea {
       width: 100%;
       height: 150px;
       resize: none;
+    }
+
+    .agreement {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      input {
+        width: 24px;
+        height: 24px;
+      }
+
+      label {
+        width: 330px;
+        margin-left: 16px;
+      }
+    }
+
+    .link {
+      border: none;
+
+      color: #fff;
+      fill: #fff;
+
+      background-color: $font-dark-color;
+    }
+
+    .link:hover {
+      background-color: $font-light-color;
     }
   }
 }

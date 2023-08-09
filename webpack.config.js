@@ -68,7 +68,7 @@ module.exports = {
       },
       {
         path: path.resolve(__dirname, 'src/partials', 'footer.html'),
-        location: 'footer',
+        location: 'body',
         template_filename: 'index.html',
       },
     ]),
