@@ -1,19 +1,53 @@
 footer {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.42px;
+
   color: #fff;
   background-color: $accent-color;
 
   .top-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
     padding: 60px 0;
 
     .logo-footer {
       width: 140px;
     }
 
+    .navigator-item:hover {
+      color: $font-light-color;
+    }
+
+    .navigator-item:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
     address {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+
       .common-link {
         display: flex;
         align-items: center;
         justify-content: flex-start;
+
+        margin-bottom: 35px;
+        font-style: normal;
+      }
+
+      .common-link:hover {
+        color: $font-light-color;
+      }
+
+      .location {
+        align-items: flex-start;
       }
 
       .location::before {
@@ -50,6 +84,49 @@ footer {
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
+      }
+    }
+
+    .social-media-blok {
+
+      .social-media-list {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        .social-media-item {
+          width: min-content;
+
+          .social-logo {
+            height: 19px;
+
+            fill: #fff;
+          }
+
+          .social-logo:hover {
+            fill: $font-light-color;
+          }
+
+          .facebook-logo {
+            width: 10px;
+          }
+
+          .twitter-logo {
+            width: 24px;
+          }
+
+          .linkedin-logo {
+            width: 19px;
+          }
+
+          .pinterest-logo {
+            width: 14px;
+          }
+        }
+
+        .social-media-item:not(:last-child) {
+          margin-right: 40px;
+        }
       }
     }
   }
