@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "My webpack template",
   "main": "index.js",
+  "homepage": "https://dreamkaman.github.io/test-task-08082023",
   "scripts": {
     "start": "set NODE_ENV=development&&webpack serve --open",
     "build:dev": "set NODE_ENV=development&&webpack",
