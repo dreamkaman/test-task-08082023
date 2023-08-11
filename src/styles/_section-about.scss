@@ -29,7 +29,8 @@
     .about-text {
       font-size: 16px;
       font-weight: 300;
-      line-height: 25px; /* 156.25% */
+      line-height: 25px;
+      /* 156.25% */
     }
 
     .link {
@@ -38,6 +39,7 @@
 
     .link:hover {
       background-color: $font-light-color;
+      transition: $transition-for-all;
     }
   }
 }
