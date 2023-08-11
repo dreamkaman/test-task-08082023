@@ -2,28 +2,29 @@
     <h2 class="title mb20">Зв’язатися з нами</h2>
     <div class="wrapper">
         <form action="#" class="contact-form">
-            <div class="client-name mb10">
-                <input class="common-input" type="text" name="clientName">
+            <div class="input-wrapper client-name mb10">
+                <input class="common-input" type="text" name="clientName" placeholder="Input text here">
                 <label class="common-label" for="clientName">Ім’я</label>
             </div>
 
-            <div class="phone mb10">
-                <input class="common-input" type="text" name="phone">
-                <label class="common-label" for="phone">Номер телефону</label>
+            <div class="input-wrapper phone mb10 ">
+                <input class="common-input" type="text" name="phone" placeholder="Input text here">
+                <label class="common-label required" for="phone">Номер телефону</label>
             </div>
-            <div class="email mb10">
-                <input class="common-input" type="email" name="email">
-                <label class="common-label" for="email">E-mail</label>
+            <div class="input-wrapper email mb10 ">
+                <input class="common-input" type="email" name="email" placeholder="Input text here">
+                <label class="common-label required" for="email">E-mail</label>
             </div>
-            <div class="service-name mb10">
-                <input class="common-input" type="text" name="serviceName">
+            <div class="input-wrapper service-name mb10">
+                <input class="common-input" type="text" name="serviceName" placeholder="Input text here">
                 <label class="common-label" for="serviceName">Назва товару/послуги</label>
             </div>
-            <div class="message mb20">
-                <textarea class="common-input" name="message" cols="1" rows="1" id="message"></textarea>
-                <label class="common-label" for="message">Повідомлення</label>
+            <div class="input-wrapper message mb20 ">
+                <textarea class="common-input" name="message" cols="1" rows="1" id="message"
+                    placeholder="Input text here"></textarea>
+                <label class="common-label required" for="message">Повідомлення</label>
             </div>
-            <div class="agreement mb20">
+            <div class="input-wrapper agreement mb20">
                 <input type="checkbox" name="agreement" id="agreement">
                 <label for="agreement">Відправляючи заявку Ви погоджуєтеся з політикою конфіденційності</label>
             </div>

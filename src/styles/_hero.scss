@@ -43,6 +43,7 @@
 
       .btn:hover {
         background-color: $font-light-color;
+        transition: $transition-for-all;
       }
     }
 
@@ -81,6 +82,7 @@
 
     .slide-link:hover {
       background-color: $font-light-color;
+      transition: $transition-for-all;
     }
 
     .arrow {

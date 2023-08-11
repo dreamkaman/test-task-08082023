@@ -21,6 +21,7 @@ footer {
 
     .navigator-item:hover {
       color: $font-light-color;
+      transition: $transition-for-all;
     }
 
     .navigator-item:not(:last-child) {
@@ -44,6 +45,7 @@ footer {
 
       .common-link:hover {
         color: $font-light-color;
+        transition: $transition-for-all;
       }
 
       .location {
@@ -105,6 +107,7 @@ footer {
 
           .social-logo:hover {
             fill: $font-light-color;
+            transition: $transition-for-all;
           }
 
           .facebook-logo {
