@@ -8,11 +8,13 @@
             </div>
 
             <div class="input-wrapper phone mb10 ">
-                <input class="common-input" type="text" name="phone" placeholder="Input text here">
+                <input class="common-input" type="text" name="phone" placeholder="Input text here"
+                    pattern="/^\+380[0-9]{9}/" required>
                 <label class="common-label required" for="phone">Номер телефону</label>
             </div>
             <div class="input-wrapper email mb10 ">
-                <input class="common-input" type="email" name="email" placeholder="Input text here">
+                <input class="common-input" type="email" name="email" placeholder="Input text here"
+                    pattern="/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g" required>
                 <label class="common-label required" for="email">E-mail</label>
             </div>
             <div class="input-wrapper service-name mb10">
@@ -21,14 +23,14 @@
             </div>
             <div class="input-wrapper message mb20 ">
                 <textarea class="common-input" name="message" cols="1" rows="1" id="message"
-                    placeholder="Input text here"></textarea>
+                    placeholder="Input text here" required></textarea>
                 <label class="common-label required" for="message">Повідомлення</label>
             </div>
             <div class="input-wrapper agreement mb20">
                 <input type="checkbox" name="agreement" id="agreement">
                 <label for="agreement">Відправляючи заявку Ви погоджуєтеся з політикою конфіденційності</label>
             </div>
-            <button class="link read-more read-more-sizes" disabled="submit">
+            <button class="link read-more read-more-sizes is-enable" type="submit">
                 Відправити
                 <svg class="arrow gap12">
                     <use href="./assets/sprite.svg#arrow-right"></use>

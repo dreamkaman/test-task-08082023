@@ -95,5 +95,10 @@
       background-color: $font-light-color;
       transition: $transition-for-all;
     }
+
+    .is-enable:disabled {
+      background-color: #8d8d8d;
+      cursor: default;
+    }
   }
 }
