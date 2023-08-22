@@ -79,6 +79,8 @@
       left: 0;
       width: 100%;
 
+      transform: translateX(-100%);
+
       .slide-link {
         position: absolute;
         bottom: 0;
@@ -95,6 +97,10 @@
       .arrow {
         fill: $font-dark-color;
       }
+    }
+
+    .current-slide {
+      transform: none;
     }
 
   }

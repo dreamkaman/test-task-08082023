@@ -10,12 +10,16 @@ btnWrapperDiv.addEventListener('click', (e) => {
   switch (jsSelector) {
     case 'leftArrow':
       if (slideCounter > 1) {
+        document.getElementById(`${slideCounter}`).classList.remove('current-slide');
         slideCounter = slideCounter - 1;
+        document.getElementById(`${slideCounter}`).classList.add('current-slide');
       }
       break;
     case 'rightArrow':
       if (slideCounter < slides) {
+        document.getElementById(`${slideCounter}`).classList.remove('current-slide');
         slideCounter = slideCounter + 1;
+        document.getElementById(`${slideCounter}`).classList.add('current-slide');
       }
       break;
     default:
