@@ -8,3 +8,5 @@ import './partials/section-contact-us.html';
 import './partials/section-our-projects.html';
 import './partials/section-our-tasks.html';
 import './index.scss'; //for 'mini-css-extract-plugin'
+
+import './scripts/slider';

@@ -4,34 +4,55 @@
         <div class="left-side">
             <h2 class="title project-title">Project</h2>
             <p class="project-name">home</p>
-            <div class="btn-wrapper">
-                <button class="btn">
-                    <svg class="arrow">
+            <div id="sliderButtons" class="btn-wrapper">
+                <button class="btn" js-selector="leftArrow">
+                    <svg class="arrow" js-selector="leftArrow">
                         <use href="./assets/sprite.svg#arrow-left"></use>
                     </svg>
                 </button>
-                <button class="btn">
-                    <svg class="arrow">
+                <button class="btn" js-selector="rightArrow">
+                    <svg class="arrow" js-selector="rightArrow">
                         <use href="./assets/sprite.svg#arrow-right"></use>
                     </svg>
                 </button>
             </div>
             <div class="counter">
-                <p>01</p>
+                <p js-selector="currentSlide">01</p>
                 <svg class="divide-line">
                     <use href="./assets/sprite.svg#divide-line"></use>
                 </svg>
-                <p>02</p>
+                <p js-selector="slides">03</p>
             </div>
         </div>
         <div class="right-side">
-            <img src="./assets/slide-01.png" alt="Our project">
-            <a href="#" class="link read-more read-more-sizes slide-link">
-                Переглянути
-                <svg class="arrow gap12">
-                    <use href="./assets/sprite.svg#arrow-right"></use>
-                </svg>
-            </a>
+            <div class="slide">
+                <img src="./assets/slide-3.png" alt="Our project">
+                <a href="#" class="link read-more read-more-sizes slide-link">
+                    Переглянути
+                    <svg class="arrow gap12">
+                        <use href="./assets/sprite.svg#arrow-right"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="slide">
+                <img src="./assets/slide-2.png" alt="Our project">
+                <a href="#" class="link read-more read-more-sizes slide-link">
+                    Переглянути
+                    <svg class="arrow gap12">
+                        <use href="./assets/sprite.svg#arrow-right"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="slide">
+                <img src="./assets/slide-1.png" alt="Our project">
+                <a href="#" class="link read-more read-more-sizes slide-link">
+                    Переглянути
+                    <svg class="arrow gap12">
+                        <use href="./assets/sprite.svg#arrow-right"></use>
+                    </svg>
+                </a>
+            </div>
+
         </div>
     </div>
 </div>
