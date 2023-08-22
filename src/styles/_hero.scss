@@ -71,22 +71,31 @@
     position: relative;
 
     width: 770px;
+    overflow: hidden;
 
-    .slide-link {
+    .slide {
       position: absolute;
-      bottom: 0;
+      top: 0;
       left: 0;
-      background-color: #ffffff;
-      cursor: pointer;
+      width: 100%;
+
+      .slide-link {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: #ffffff;
+        cursor: pointer;
+      }
+
+      .slide-link:hover {
+        background-color: $font-light-color;
+        transition: $transition-for-all;
+      }
+
+      .arrow {
+        fill: $font-dark-color;
+      }
     }
 
-    .slide-link:hover {
-      background-color: $font-light-color;
-      transition: $transition-for-all;
-    }
-
-    .arrow {
-      fill: $font-dark-color;
-    }
   }
 }
