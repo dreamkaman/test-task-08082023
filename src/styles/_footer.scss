@@ -16,7 +16,14 @@ footer {
     padding: 60px 0;
 
     .logo-footer {
+      position: relative;
       width: 140px;
+      transition: $transition-for-all;
+    }
+
+    .logo-footer:hover {
+      transform: scale(1.2);
+      transition: $transition-for-all;
     }
 
     .navigator-item:hover {

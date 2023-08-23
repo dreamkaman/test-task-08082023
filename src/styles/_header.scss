@@ -4,10 +4,18 @@ header {
   height: 102px;
 
   .logo {
+    position: relative;
     width: 70px;
     margin-right: 330px;
     stroke-width: 0;
     fill: $font-dark-color;
+
+    transition: $transition-for-all;
+  }
+
+  .logo:hover {
+    transform: scale(1.2);
+    transition: $transition-for-all;
   }
 
   .menu {
@@ -17,6 +25,8 @@ header {
 
     .menu-item {
       padding: 4px 0;
+
+      transition: $transition-for-all;
     }
 
     .menu-item:not(:last-child) {
@@ -25,6 +35,8 @@ header {
 
     .menu-item:hover {
       color: $font-light-color;
+
+      transition: $transition-for-all;
     }
   }
 
