@@ -18,7 +18,6 @@
         left: 21px;
 
         color: #8d8d8d;
-        background-color: $font-lighter-color;
       }
 
       .required::after {
@@ -40,21 +39,25 @@
       background-color: $font-lighter-color;
     }
 
+
     .common-input::placeholder {
       color: $font-lighter-color;
     }
 
-    // .text-input:not(:placeholder-shown)+.label-text
-
+    .common-input:focus,
+    .common-input:not(:placeholder-shown),
+    textarea:focus,
+    textarea:not(:placeholder-shown) {
+      padding: 20px 21px 8px;
+    }
 
     .common-input:hover+.common-label,
     .common-input:focus+.common-label,
     .common-input:not(:placeholder-shown)+.common-label {
-      top: -8px;
-      left: 10px;
+      top: 0;
 
       font-weight: 600;
-
+      color: #005CC8;
       transition: $transition-for-all;
     }
 
