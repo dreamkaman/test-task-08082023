@@ -27,7 +27,7 @@ btnWrapperDiv.addEventListener('click', (e) => {
 
   document.getElementById(`${slideCounter}`).classList.add('current-slide');
 
-  const finalCurrentValue = slideCounter < 10 ? '0' + slideCounter : '' + slideCounter;
+  const finalShowedValue = slideCounter < 10 ? '0' + slideCounter : '' + slideCounter;
 
-  currentSlideParagraph.innerHTML = finalCurrentValue;
+  currentSlideParagraph.innerHTML = finalShowedValue;
 });

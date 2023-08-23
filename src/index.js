@@ -9,4 +9,6 @@ import './partials/section-our-projects.html';
 import './partials/section-our-tasks.html';
 import './index.scss'; //for 'mini-css-extract-plugin'
 
+//import of the scripts
 import './scripts/slider';
+import './scripts/contactUsForm';
