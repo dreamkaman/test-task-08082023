@@ -44,19 +44,17 @@
       color: $font-lighter-color;
     }
 
-    .common-input:hover,
     .common-input:focus,
     .common-input:not(:placeholder-shown),
-    textarea:hover,
     textarea:focus,
     textarea:not(:placeholder-shown) {
-      padding: 14px 21px 5px;
+      padding: 20px 21px 8px;
     }
 
     .common-input:hover+.common-label,
     .common-input:focus+.common-label,
     .common-input:not(:placeholder-shown)+.common-label {
-      top: -2px;
+      top: 0;
 
       font-weight: 600;
       color: #005CC8;
