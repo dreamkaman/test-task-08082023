@@ -42,4 +42,13 @@
       transition: $transition-for-all;
     }
   }
+
+  img {
+    position: relative;
+  }
+
+  img:hover {
+    transform: scale(1.1);
+    transition: $transition-for-all;
+  }
 }

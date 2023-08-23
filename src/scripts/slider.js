@@ -7,24 +7,25 @@ const currentSlideParagraph = document.querySelector('p[js-selector="currentSlid
 
 btnWrapperDiv.addEventListener('click', (e) => {
   const jsSelector = e.target.attributes['js-selector']?.value;
+  document.getElementById(`${slideCounter}`).classList.remove('current-slide');
   switch (jsSelector) {
     case 'leftArrow':
       if (slideCounter > 1) {
-        document.getElementById(`${slideCounter}`).classList.remove('current-slide');
         slideCounter = slideCounter - 1;
-        document.getElementById(`${slideCounter}`).classList.add('current-slide');
+      } else {
+        slideCounter = slides;
       }
       break;
     case 'rightArrow':
       if (slideCounter < slides) {
-        document.getElementById(`${slideCounter}`).classList.remove('current-slide');
         slideCounter = slideCounter + 1;
-        document.getElementById(`${slideCounter}`).classList.add('current-slide');
+      } else {
+        slideCounter = 1;
       }
       break;
-    default:
-      break;
   }
+
+  document.getElementById(`${slideCounter}`).classList.add('current-slide');
 
   const finalCurrentValue = slideCounter < 10 ? '0' + slideCounter : '' + slideCounter;
 
