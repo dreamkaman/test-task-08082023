@@ -82,6 +82,8 @@
 
       transform: translateX(-100%);
 
+      transition: $transition-for-slider;
+
       .slide-link {
         position: absolute;
         bottom: 0;
