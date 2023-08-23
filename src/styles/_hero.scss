@@ -36,6 +36,8 @@
         border: 1px solid #f2f2f2;
         background-color: #f9f9f9;
 
+        transition: $transition-for-all;
+
         .arrow {
           fill: $font-dark-color;
         }
@@ -90,6 +92,8 @@
         left: 0;
         background-color: #ffffff;
         cursor: pointer;
+
+        transition: $transition-for-all;
       }
 
       .slide-link:hover {

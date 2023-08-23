@@ -35,6 +35,7 @@
 
     .link {
       background-color: #fff;
+      transition: $transition-for-all;
     }
 
     .link:hover {
@@ -45,6 +46,7 @@
 
   img {
     position: relative;
+    transition: $transition-for-all;
   }
 
   img:hover {
