@@ -22,6 +22,10 @@ header {
     .menu-item:not(:last-child) {
       margin-right: 60px;
     }
+
+    .menu-item:hover {
+      color: $font-light-color;
+    }
   }
 
   .active {
